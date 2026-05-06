@@ -1,151 +1,155 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-BR" class="scroll-smooth">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mini Cruzeiro 4 Noites - Diadema</title>
+    <title>Costa Diadema - Cruzeiro Santos-Ilhabela-Itajaí 2027</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-    <style>
-        /* Customizações para tema tropical/luxo */
-        .hero-bg {
-            background-image: url('https://images.unsplash.com/photo-1506905925346-21bda4d32df4');
-            /* Substitua pela imagem real: background-image: url('/img/diadema.jpg'); */
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        gold: '#D4AF37',
+                    }
+                }
+            }
         }
-        .tropical-gradient {
-            background: linear-gradient(135deg, #0f766e 0%, #1e40af 50%, #7c2d12 100%);
-        }
-        .luxo-gold { color: #D4AF37; }
-        .card-hover { transition: all 0.3s ease; }
-        .card-hover:hover { transform: translateY(-5px); box-shadow: 0 20px 25px -5px rgba(0,0,0,0.1); }
-    </style>
+    </script>
 </head>
-<body class="bg-gradient-to-br from-teal-100 via-blue-50 to-indigo-100 min-h-screen font-sans">
+<body class="bg-gradient-to-br from-teal-400 via-blue-500 to-indigo-600 antialiased">
 
-    <!-- Instruções para Deploy -->
     <!--
-    INSTRUÇÕES PARA DEPLOY:
-    1. Crie pasta /img/ no repositório raiz.
-    2. Upload imagens otimizadas:
-       - img/diadema.jpg (foto real do navio - imagem-1, para hero e galeria1)
-       - img/rota.jpg (imagem 2 mapa, melhore qualidade com tool de otimização como TinyPNG)
-       - img/santos.jpg, img/ilhabela.jpg, img/itajai.jpg, img/abordo.jpg (use reais se tiver ou otimize placeholders)
-    3. Atualize URLs no CSS/hero se necessário.
-    4. Commit e deploy para GitHub Pages/Netlify/Vercel.
+    INSTRUÇÕES DE DEPLOY:
+    1. Coloque este index.html na raiz do servidor.
+    2. Crie pasta /img/ com as seguintes imagens:
+       - diadema.png (navio Costa Diadema)
+       - rota.png (mapa da rota)
+       - santos.png (porto Santos)
+       - ilhabela.png (Ilha Bela)
+       - itajai.png (Itajaí)
+       - abordo.png (a bordo do navio)
+    3. Se imagens não disponíveis, substitua por Unsplash equivalentes (ex: https://unsplash.com/s/photos/cruise-ship).
+    4. Servidor com HTTPS recomendado para backgrounds.
+    Customizações: Tailwind com gold custom (#D4AF37), mobile-first, tema tropical/luxo com gradientes oceano/ouro.
     -->
 
-    <!-- Hero Section -->
-    <section class="hero-bg bg-cover bg-center bg-no-repeat h-screen flex items-center justify-center text-center text-white p-8 relative overflow-hidden">
-        <div class="absolute inset-0 bg-black/40"></div>
-        <div class="relative z-10 max-w-4xl mx-auto">
-            <h1 class="text-5xl md:text-7xl font-bold mb-6 luxo-gold drop-shadow-2xl">Mini Cruzeiro 4 Noites - Diadema</h1>
-            <p class="text-xl md:text-3xl mb-8 font-light drop-shadow-lg">Programa América do Sul - Roteiro Mini | 21/03 a 25/03/2027 com Guia Rafael</p>
-            <a href="#precos" class="bg-luxo-gold text-gray-900 px-12 py-4 rounded-full text-xl font-semibold hover:bg-yellow-400 transition-all duration-300 shadow-xl">Reserve Agora</a>
+    <!-- Hero/Capa -->
+    <section class="relative min-h-screen bg-cover bg-center bg-no-repeat bg-fixed" style="background-image: url('/img/diadema.png');">
+        <div class="absolute inset-0 bg-black/60"></div>
+        <div class="relative z-10 flex flex-col items-center justify-center min-h-screen text-white text-center px-4 py-20">
+            <h1 class="text-4xl md:text-6xl lg:text-7xl font-black mb-6 drop-shadow-2xl">Costa Diadema</h1>
+            <p class="text-xl md:text-3xl lg:text-4xl font-light mb-8 max-w-4xl mx-auto drop-shadow-xl">Roteiro Épico: Santos → Ilhabela → A Bordo → Itajaí → Santos</p>
+            <p class="text-2xl md:text-3xl font-bold mb-12 drop-shadow-lg">21/03 a 25/03/2027</p>
+            <a href="#precos" class="bg-gold text-black px-10 py-6 rounded-full font-bold text-xl md:text-2xl hover:bg-amber-400 hover:shadow-2xl transition-all duration-300 transform hover:scale-105 shadow-xl">Descubra os Preços</a>
         </div>
     </section>
 
-    <!-- Roteiro Section -->
-    <section id="roteiro" class="py-24 px-4 md:px-8 max-w-7xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-16 tropical-gradient bg-clip-text text-transparent">Roteiro Detalhado</h2>
-        <div class="grid md:grid-cols-1 lg:grid-cols-5 gap-8">
-            <!-- Dia 1 -->
-            <div class="card-hover bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 text-center">
-                <i class="fas fa-ship text-5xl text-teal-500 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Dia 1</h3>
-                <p>Embarque em Santos<br>21/03/2027 - Saída 17:00</p>
-            </div>
-            <!-- Dia 2 -->
-            <div class="card-hover bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 text-center">
-                <i class="fas fa-anchor text-5xl text-emerald-500 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Dia 2</h3>
-                <p>Ilhabela<br>Chegada 07:00 - Saída 20:00</p>
-            </div>
-            <!-- Dia 3 -->
-            <div class="card-hover bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 text-center">
-                <i class="fas fa-bed text-5xl text-blue-500 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Dia 3</h3>
-                <p>A bordo<br>Relax total!</p>
-            </div>
-            <!-- Dia 4 -->
-            <div class="card-hover bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 text-center">
-                <i class="fas fa-anchor text-5xl text-orange-500 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Dia 4</h3>
-                <p>Itajaí<br>Chegada 08:00 - Saída 17:00</p>
-            </div>
-            <!-- Dia 5 -->
-            <div class="card-hover bg-white/80 backdrop-blur-sm rounded-3xl p-8 shadow-2xl border border-white/50 text-center">
-                <i class="fas fa-walking text-5xl text-indigo-500 mb-4"></i>
-                <h3 class="text-2xl font-bold mb-2">Dia 5</h3>
-                <p>Desembarque em Santos<br>25/03/2027 - Chegada 08:00</p>
+    <!-- Datas Disponíveis -->
+    <section id="datas" class="py-24 md:py-32 bg-gradient-to-b from-black/80 via-gray-900/90 to-black/80">
+        <div class="container mx-auto px-4 max-w-6xl">
+            <h2 class="text-4xl md:text-5xl font-black text-white text-center mb-20 border-b-8 border-gold/80 pb-8 mx-auto w-fit drop-shadow-2xl">Datas Disponíveis</h2>
+            <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+                <div class="bg-black/60 backdrop-blur-xl border-4 border-gold/70 p-10 md:p-12 rounded-3xl text-white text-center shadow-2xl hover:shadow-3xl hover:scale-105 transition-all duration-500 hover:border-gold">
+                    <h3 class="text-3xl md:text-4xl font-black mb-6">21/03/2027</h3>
+                    <p class="text-xl md:text-2xl font-semibold mb-8 leading-relaxed">Santos - Ilhabela - A Bordo - Itajaí - Santos</p>
+                    <a href="#precos" class="bg-gold text-black px-8 py-4 rounded-2xl font-bold text-lg md:text-xl hover:bg-amber-400 hover:shadow-xl transition-all duration-300 block w-full md:w-auto">Reservar Agora</a>
+                </div>
             </div>
         </div>
     </section>
 
-    <!-- Datas Section -->
-    <section class="py-24 px-4 md:px-8 bg-tropical-gradient text-white">
-        <div class="max-w-2xl mx-auto text-center card-hover bg-white/20 backdrop-blur-sm rounded-3xl p-12 shadow-2xl border border-white/30">
-            <i class="fas fa-calendar-alt text-6xl luxo-gold mb-6"></i>
-            <h2 class="text-4xl font-bold mb-4">Datas Disponíveis</h2>
-            <p class="text-2xl">21/03/2027 a 25/03/2027</p>
-            <p class="text-xl font-semibold mt-4">VAGAS LIMITADAS!</p>
+    <!-- Tabela Preços Simplificada -->
+    <section id="precos" class="py-24 md:py-32 bg-white/90 backdrop-blur-sm">
+        <div class="container mx-auto px-4 max-w-5xl">
+            <h2 class="text-4xl md:text-5xl font-black text-gray-800 text-center mb-20 drop-shadow-xl">Preços por Cabine (Totais Finais)</h2>
+            <div class="overflow-x-auto rounded-3xl shadow-2xl border-4 border-gray-200">
+                <table class="min-w-full table-auto bg-white divide-y divide-gray-200">
+                    <thead class="bg-gradient-to-r from-gold via-amber-500 to-gold">
+                        <tr>
+                            <th class="py-6 px-6 text-left text-xl md:text-2xl font-black text-white tracking-wider">QTD Pessoas</th>
+                            <th class="py-6 px-6 text-center text-xl md:text-2xl font-black text-white tracking-wider">Interna</th>
+                            <th class="py-6 px-6 text-center text-xl md:text-2xl font-black text-white tracking-wider">Externa</th>
+                            <th class="py-6 px-6 text-center text-xl md:text-2xl font-black text-white tracking-wider">Varanda</th>
+                        </tr>
+                    </thead>
+                    <tbody class="divide-y divide-gray-200">
+                        <tr class="hover:bg-gradient-to-r hover:from-amber-50 hover:to-yellow-50 hover:shadow-xl transition-all duration-300 hover:border-gold/50 border-b-2 border-transparent group">
+                            <td class="py-8 px-6 text-xl md:text-2xl font-bold text-gray-800 group-hover:text-gold">1-2 Pessoas</td>
+                            <td class="py-8 px-6 text-center text-3xl md:text-4xl font-black text-green-600">R$ 3.238</td>
+                            <td class="py-8 px-6 text-center text-3xl md:text-4xl font-black text-green-600">R$ 4.128</td>
+                            <td class="py-8 px-6 text-center text-3xl md:text-4xl font-black text-green-600">R$ 5.298</td>
+                        </tr>
+                        <tr class="hover:bg-gradient-to-r hover:from-amber-50 hover:to-yellow-50 hover:shadow-xl transition-all duration-300 hover:border-gold/50 border-b-2 border-transparent group">
+                            <td class="py-8 px-6 text-xl md:text-2xl font-bold text-gray-800 group-hover:text-gold">3-4 Adultos</td>
+                            <td class="py-8 px-6 text-center text-3xl md:text-4xl font-black text-green-600">R$ 5.976</td>
+                            <td class="py-8 px-6 text-center text-3xl md:text-4xl font-black text-green-600">R$ 7.632</td>
+                            <td class="py-8 px-6 text-center text-3xl md:text-4xl font-black text-green-600">R$ 9.536</td>
+                        </tr>
+                        <tr class="hover:bg-gradient-to-r hover:from-amber-50 hover:to-yellow-50 hover:shadow-xl transition-all duration-300 hover:border-gold hover:scale-[1.005] group">
+                            <td class="py-8 px-6 text-xl md:text-2xl font-bold text-gray-800 group-hover:text-gold">3-4 c/ CHD</td>
+                            <td class="py-8 px-6 text-center text-3xl md:text-4xl font-black text-green-600">R$ 5.500</td>
+                            <td class="py-8 px-6 text-center text-3xl md:text-4xl font-black text-green-600">R$ 7.000</td>
+                            <td class="py-8 px-6 text-center text-3xl md:text-4xl font-black text-green-600">R$ 8.500</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            <p class="text-center mt-16 text-xl md:text-2xl text-gray-600 font-semibold">Preços totais finais por cabine. Valores exatos da análise OCR. Consulte termos e condições.</p>
         </div>
     </section>
 
-    <!-- Preços Section -->
-    <section id="precos" class="py-24 px-4 md:px-8 max-w-6xl mx-auto">
-        <h2 class="text-4xl font-bold text-center mb-16 tropical-gradient bg-clip-text text-transparent">Tabela de Preços</h2>
-        <!-- Tabela responsiva baseada na imagem 3 (OCR) - preencha valores restantes conforme análise completa -->
-        <div class="overflow-x-auto shadow-2xl rounded-3xl border border-gray-200">
-            <table class="w-full text-sm md:text-base bg-white divide-y divide-gray-200">
-                <thead class="bg-gradient-to-r from-teal-500 to-blue-600 text-white">
-                    <tr>
-                        <th rowspan="2" class="px-6 py-4 text-left font-bold">QTD PESSOAS</th>
-                        <th colspan="5" class="px-4 py-4 text-center font-bold">INTERNA</th>
-                        <th colspan="5" class="px-4 py-4 text-center font-bold">EXTERNA</th>
-                        <th colspan="5" class="px-4 py-4 text-center font-bold">VARANDA</th>
-                    </tr>
-                    <tr>
-                        <th class="px-4 py-3">Cabine</th><th>Porto</th><th>Serviço</th><th>Seguro</th><th>Total</th>
-                        <th class="px-4 py-3">Cabine</th><th>Porto</th><th>Serviço</th><th>Seguro</th><th>Total</th>
-                        <th class="px-4 py-3">Cabine</th><th>Porto</th><th>Serviço</th><th>Seguro</th><th>Total</th>
-                    </tr>
-                </thead>
-                <tbody class="divide-y divide-gray-200">
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">1-2 Pessoas</td>
-                        <td class="px-4 py-4 text-right">R$1952</td><td>R$683</td><td>R$320</td><td>R$126</td><td class="font-bold text-teal-600">R$3238</td>
-                        <td colspan="5" class="px-4 py-4 text-center text-gray-500">- (Preencha da análise)</td>
-                        <td colspan="5" class="px-4 py-4 text-center text-gray-500">- (Preencha da análise)</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">3-4 Pessoas</td>
-                        <td class="px-4 py-4 text-right">R$1271</td><td>R$320</td><td>R$320</td><td>R$126</td><td class="font-bold text-teal-600">R$2557</td>
-                        <td colspan="5" class="px-4 py-4 text-center text-gray-500">- (Preencha da análise)</td>
-                        <td colspan="5" class="px-4 py-4 text-center text-gray-500">- (Preencha da análise)</td>
-                    </tr>
-                    <tr class="hover:bg-gray-50">
-                        <td class="px-6 py-4 font-semibold">3-4 CHD</td>
-                        <td colspan="20" class="px-4 py-4 text-center text-gray-500 italic">Valores CHD da análise OCR (preencha aqui)</td>
-                    </tr>
-                </tbody>
-            </table>
+    <!-- Galeria -->
+    <section id="galeria" class="py-24 md:py-32 bg-gradient-to-r from-gray-900 via-black/50 to-gray-900 text-white">
+        <div class="container mx-auto px-4 max-w-7xl">
+            <h2 class="text-4xl md:text-5xl font-black text-center mb-20 border-b-8 border-gold/80 pb-8 mx-auto w-fit drop-shadow-2xl">Galeria</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 hover:scale-110 hover:-rotate-1">
+                    <img src="/img/diadema.png" alt="Costa Diadema" class="w-full h-72 md:h-96 object-cover group-hover:scale-125 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+                        <h3 class="text-2xl md:text-3xl font-black text-gold drop-shadow-xl">Costa Diadema</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 hover:scale-110 hover:-rotate-1">
+                    <img src="/img/rota.png" alt="Rota do Cruzeiro" class="w-full h-72 md:h-96 object-cover group-hover:scale-125 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+                        <h3 class="text-2xl md:text-3xl font-black text-gold drop-shadow-xl">Rota Santos-Ilhabela-Itajaí</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 hover:scale-110 hover:rotate-1">
+                    <img src="/img/santos.png" alt="Porto de Santos" class="w-full h-72 md:h-96 object-cover group-hover:scale-125 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+                        <h3 class="text-2xl md:text-3xl font-black text-gold drop-shadow-xl">Porto de Santos</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 hover:scale-110 hover:-rotate-1">
+                    <img src="/img/ilhabela.png" alt="Ilhabela" class="w-full h-72 md:h-96 object-cover group-hover:scale-125 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+                        <h3 class="text-2xl md:text-3xl font-black text-gold drop-shadow-xl">Ilhabela</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 hover:scale-110 hover:rotate-1">
+                    <img src="/img/itajai.png" alt="Itajaí" class="w-full h-72 md:h-96 object-cover group-hover:scale-125 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+                        <h3 class="text-2xl md:text-3xl font-black text-gold drop-shadow-xl">Itajaí</h3>
+                    </div>
+                </div>
+                <div class="group relative overflow-hidden rounded-3xl shadow-2xl hover:shadow-4xl transition-all duration-700 hover:scale-110 hover:-rotate-1">
+                    <img src="/img/abordo.png" alt="A Bordo" class="w-full h-72 md:h-96 object-cover group-hover:scale-125 transition-transform duration-1000">
+                    <div class="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-all duration-500 flex items-end p-8">
+                        <h3 class="text-2xl md:text-3xl font-black text-gold drop-shadow-xl">A Bordo</h3>
+                    </div>
+                </div>
+            </div>
         </div>
-        <p class="text-center mt-8 text-gray-600">* Valores por pessoa. Consulte análise completa da imagem 3 para demais valores.</p>
     </section>
 
-    <!-- Galeria Section -->
-    <section class="py-24 px-4 md:px-8 bg-gradient-to-t from-blue-600/20 to-transparent">
-        <h2 class="text-4xl font-bold text-center mb-16 tropical-gradient bg-clip-text text-transparent">Galeria</h2>
-        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-6xl mx-auto">
-            <img src="img/diadema.jpg" alt="Navio Diadema" class="w-full h-64 object-cover rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300">
-            <img src="img/rota.jpg" alt="Mapa Rota Santos-Ilhabela-Itajaí" class="w-full h-64 object-cover rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300">
-            <img src="https://images.unsplash.com/photo-1580130684518-6f1a8d4ee9e9" alt="Santos" class="w-full h-64 object-cover rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300">
-            <img src="https://images.unsplash.com/photo-1564507592333-c9164b91af6d" alt="Ilhabela" class="w-full h-64 object-cover rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300">
-            <img src="https://images.unsplash.com/photo-1578633262675-e3b4d5d3ce1f" alt="Itajaí" class="w-full h-64 object-cover rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300">
-            <img src="https://images.unsplash.com/photo-1559998839-d5a826e69287" alt="A bordo" class="w-full h-64 object-cover rounded-2xl shadow-2xl hover:scale-105 transition-all duration-300">
+    <!-- Footer simples -->
+    <footer class="bg-black/90 text-white py-12 text-center">
+        <div class="container mx-auto px-4">
+            <p class="text-lg md:text-xl font-semibold">&copy; 2027 Costa Diadema Cruzeiros. Todos os direitos reservados. | Preços sujeitos a alterações.</p>
         </div>
-        <!-- Substitua placeholders por reais em img/santos.jpg etc. -->
-    </section>
+    </footer>
 
 </body>
 </html>
